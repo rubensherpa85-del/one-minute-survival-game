@@ -98,15 +98,12 @@
                   <li><strong>Lose:</strong> If your health reaches zero, the run ends.</li>
                   <li><strong>Enemies:</strong> Chasers are balanced, Runners are fast, Brutes are heavy hitters.</li>
                 </ul>
-
-                <div class="settings-group">
-                  <button id="instructions-mute-toggle" class="secondary-button" type="button">Mute: Off</button>
-                  <button id="reduced-motion-toggle" class="secondary-button" type="button">Reduced Motion: Off</button>
-                  <button id="instructions-clear-scores" class="secondary-button" type="button">Clear High Scores</button>
-                </div>
               </div>
               <div class="panel-actions">
-                <button id="instructions-back" class="primary-button" type="button">Back</button>
+                <button id="instructions-back" class="secondary-button" type="button">Back</button>
+                <button id="instructions-clear-scores" class="secondary-button" type="button">Clear Scores</button>
+                <button id="instructions-mute-toggle" class="secondary-button" type="button">Mute: Off</button>
+                <button id="reduced-motion-toggle" class="secondary-button" type="button">Reduced Motion: Off</button>
               </div>
             </div>
           </div>
@@ -114,10 +111,10 @@
           <div id="high-scores-overlay" class="overlay" aria-modal="true">
             <div class="panel scores-panel">
               <h2>High Scores</h2>
-              <div id="high-score-list" class="score-list" aria-live="polite"></div>
+              <ul id="high-score-list" class="score-list"></ul>
               <div class="panel-actions">
+                <button id="scores-back" class="secondary-button" type="button">Back</button>
                 <button id="scores-clear-button" class="secondary-button" type="button">Clear Scores</button>
-                <button id="scores-back" class="primary-button" type="button">Back</button>
               </div>
             </div>
           </div>
@@ -127,7 +124,7 @@
               <h2>Paused</h2>
               <div class="button-stack compact">
                 <button id="resume-button" class="primary-button" type="button">Resume</button>
-                <button id="pause-menu-button" class="secondary-button" type="button">Return to Menu</button>
+                <button id="pause-menu-button" class="secondary-button" type="button">Main Menu</button>
               </div>
             </div>
           </div>
@@ -135,14 +132,14 @@
           <div id="upgrade-overlay" class="overlay" aria-modal="true">
             <div class="panel upgrade-panel">
               <h2>Choose an Upgrade</h2>
-              <div id="upgrade-cards" class="upgrade-grid" aria-live="polite"></div>
+              <div id="upgrade-cards" class="upgrade-grid"></div>
             </div>
           </div>
 
           <div id="game-over-overlay" class="overlay" aria-modal="true">
             <div class="panel small-panel">
-              <h2>Game Over</h2>
-              <div id="game-over-summary" class="summary-block"></div>
+              <h2>Run Over</h2>
+              <p id="game-over-summary" class="summary-block"></p>
               <div class="button-stack compact">
                 <button id="restart-button" class="primary-button" type="button">Restart</button>
                 <button id="game-over-menu-button" class="secondary-button" type="button">Main Menu</button>
@@ -152,18 +149,18 @@
 
           <div id="victory-overlay" class="overlay" aria-modal="true">
             <div class="panel small-panel">
-              <h2>Victory!</h2>
-              <div id="victory-summary" class="summary-block"></div>
+              <h2>Victory</h2>
+              <p id="victory-summary" class="summary-block"></p>
               <div class="button-stack compact">
-                <button id="victory-restart-button" class="primary-button" type="button">Restart</button>
+                <button id="victory-restart-button" class="primary-button" type="button">Play Again</button>
                 <button id="victory-menu-button" class="secondary-button" type="button">Main Menu</button>
               </div>
             </div>
           </div>
 
-          <div id="joystick" class="joystick hidden" aria-label="Virtual joystick">
+          <div id="joystick" class="joystick" aria-label="Virtual joystick">
             <div class="joystick-base">
-              <div id="joystick-stick" class="joystick-stick"></div>
+              <div id="joystick-stick"></div>
             </div>
           </div>
         </div>
